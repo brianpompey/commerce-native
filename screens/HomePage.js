@@ -7,7 +7,10 @@ export default function HomePage() {
     return(
         <View style={styles.container}>
             <Text style={styles.headingText}>SmokeShow</Text>
-            <TouchableOpacity>
+            <TouchableOpacity 
+            onPress={() => {
+                alert('You tapped the button!');
+            }}>
                 <Text>Grills</Text>
                 <Image style={styles.stretch} source={require('./../assets/home/grills.jpg')}/>
             </TouchableOpacity>
