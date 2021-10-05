@@ -8,7 +8,8 @@ import { CartIcon } from './../components/CartIcon.js';
 import { ProductDetails } from './ProductDetails.js';
 import { Cart } from './Cart.js';
 import { CartProvider } from './../CartContext.js';
-//import SmokerPage from './SmokerPage.js';
+import { Recipes } from './Recipes.js';
+
 
 
 const Stack = createNativeStackNavigator();
@@ -19,24 +20,25 @@ export default function HomePage() {
             <NavigationContainer>
                 <Stack.Navigator initialRouteName="Main">
                     <Stack.Screen name='Main' component={Main} />
-                        <Stack.Screen name='Grills' component={ProductsList} 
+                    <Stack.Screen name='Recipes' component={Recipes} />
+                    <Stack.Screen name='Grills' component={ProductsList} 
                             options={({ navigation }) => ({
                                 title: 'Grills',
                                 headerTitleStyle: styles.headerTitle,
                                 headerRight: () => <CartIcon navigation={navigation}/>,   
-                        })}/>
-                        <Stack.Screen name='ProductDetails' component={ProductDetails} 
+                    })}/>
+                    <Stack.Screen name='ProductDetails' component={ProductDetails} 
                         options={({ navigation }) => ({
                             title: 'Product details',
                             headerTitleStyle: styles.headerTitle,
                             headerRight: () => <CartIcon navigation={navigation}/>,
-                        })} />
-                        <Stack.Screen name='Cart' component={Cart} 
+                    })} />
+                    <Stack.Screen name='Cart' component={Cart} 
                         options={({ navigation }) => ({
                             title: 'My cart',
                             headerTitleStyle: styles.headerTitle,
                             headerRight: () => <CartIcon navigation={navigation}/>,
-                        })} />
+                    })} />
                 </Stack.Navigator>
             </NavigationContainer>
         </CartProvider>
@@ -49,5 +51,3 @@ const styles = StyleSheet.create({
     }
   });
 
-
-//headerRight: () => <CartIcon navigation={navigation}/>
