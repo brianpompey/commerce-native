@@ -40,7 +40,7 @@ export function Cart ({navigation}) {
       ListFooterComponent={Totals}
     />
     <TouchableOpacity style={styles.clearButton}>
-      <Text style={styles.buttonText}>Hello WOrld</Text>
+      <Text style={styles.buttonText}>Clear Cart</Text>
     </TouchableOpacity>
     </View>
   );
@@ -88,5 +88,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: '#FF0000',
+    fontSize: 14,
+    fontWeight: 'bold',
   }
 });
