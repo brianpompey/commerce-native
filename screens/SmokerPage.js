@@ -11,7 +11,7 @@ import { CartProvider } from './../CartContext.js';
 
 const Stack = createNativeStackNavigator();
 
-function App() {
+function SmokerPage() {
   return (
     <CartProvider>
       <NavigationContainer>
@@ -46,4 +46,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default App;
+export default SmokerPage;
