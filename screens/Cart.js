@@ -39,7 +39,9 @@ export function Cart ({navigation}) {
       keyExtractor={(item) => item.product.id.toString()}
       ListFooterComponent={Totals}
     />
-    <TouchableOpacity style={styles.clearButton}><Text style={styles.buttonText}>Hello WOrld</Text></TouchableOpacity>
+    <TouchableOpacity style={styles.clearButton}>
+      <Text style={styles.buttonText}>Hello WOrld</Text>
+    </TouchableOpacity>
     </View>
   );
 }
@@ -80,6 +82,9 @@ const styles = StyleSheet.create({
   clearButton: {
     backgroundColor: '#000000',
     width: 100,
+    height: 37,
+    padding: 12,
+    borderRadius: 32 / 2,
   },
   buttonText: {
     color: '#FF0000',
