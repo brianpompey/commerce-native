@@ -42,12 +42,11 @@ export function CartProvider(props) {
   
   function clearCart() {
     setItems: 0;
-    return items;
   }
   
   return (
     <CartContext.Provider 
-      value={{items, setItems, getItemsCount, addItemToCart, getTotalPrice}}>
+      value={{items, setItems, getItemsCount, addItemToCart, getTotalPrice, clearCart}}>
       {props.children}
     </CartContext.Provider>
   );
