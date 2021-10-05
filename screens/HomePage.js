@@ -1,24 +1,25 @@
 import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import Icon from '../components/Icon';
+import { Main } from './Main.js';
+import { ProductsList } from './ProductsList.js';
+import { CartIcon } from './../components/CartIcon.js';
 
 
+const Stack = createNativeStackNavigator();
 
 export default function HomePage() {
     return(
-        <View style={styles.container}>
-            <Text style={styles.headingText}>SmokeShow</Text>
-            <TouchableOpacity 
-            onPress={() => {
-                alert('You tapped the button!');
-            }}>
-                <Text>Grills</Text>
-                <Image style={styles.stretch} source={require('./../assets/home/grills.jpg')}/>
-            </TouchableOpacity>
-            <TouchableOpacity>
-                <Text>Recipes</Text>
-                <Image style={styles.stretch} source={require('./../assets/home/recipes.jpg')}/>
-            </TouchableOpacity>
-        </View>
+        <NavigationContainer>
+            <Stack.Navigator>
+
+                <Stack.Screen name='Main' component={Main} 
+                    options={{ title: 'Main' }}/>
+                
+            </Stack.Navigator>
+        </NavigationContainer>
 
     );
 }
