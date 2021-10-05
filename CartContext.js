@@ -1,6 +1,6 @@
 import React, {createContext, useState} from 'react';
 
-import { getProduct } from './services/ProductsService.js';
+import { getProduct, noProducts } from './services/ProductsService.js';
 
 export const CartContext = createContext();
 
@@ -42,7 +42,7 @@ export function CartProvider(props) {
   
   /** */
   function clearCart() {
-    return setItems(0);
+    return setItems(noProducts);
   }
   
   return (

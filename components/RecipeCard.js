@@ -1,12 +1,12 @@
 import React from 'react';
-import {Text, Image, View, StyleSheet, TouchableOpacity} from 'react-native';
+import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 
 export function Recipe({name, description, onPress}) {
   return (
     <TouchableOpacity style={styles.card} onPress={onPress}>
       <View style={styles.infoContainer}>
         <Text style={styles.name}>{name}</Text>
-        <Text style={styles.price}>$ {description}</Text>
+        <Text style={styles.descr}>$ {description}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
   },
-  price: {
+  descr: {
     fontSize: 16,
     fontWeight: '600',
     marginBottom: 8,

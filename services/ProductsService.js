@@ -29,3 +29,7 @@ export function getProducts() {
 export function getProduct(id) {
     return PRODUCTS.find((product) => (product.id == id));
 }
+
+export function noProducts() {
+    return [];
+}
