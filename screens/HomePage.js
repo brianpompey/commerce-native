@@ -7,7 +7,14 @@ export default function HomePage() {
     return(
         <View style={styles.container}>
             <Text style={styles.headingText}>SmokeShow</Text>
-            <Image style={styles.stretch} source={require('./../assets/home/grills.jpg')}/>
+            <TouchableOpacity>
+                <Text>Grills</Text>
+                <Image style={styles.stretch} source={require('./../assets/home/grills.jpg')}/>
+            </TouchableOpacity>
+            <TouchableOpacity>
+                <Text>Recipes</Text>
+                <Image style={styles.stretch} source={require('./../assets/home/recipes.jpg')}/>
+            </TouchableOpacity>
         </View>
 
     );
