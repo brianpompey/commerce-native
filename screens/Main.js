@@ -14,7 +14,10 @@ export function Main ({navigation}) {
                 <Text>Grills</Text>
                 <Image style={styles.stretch} source={require('./../assets/home/grills.jpg')}/>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity
+                onPress={() => {
+                    navigation.navigate('Recipes');
+                }}>
                 <Text>Recipes</Text>
                 <Image style={styles.stretch} source={require('./../assets/home/recipes.jpg')}/>
             </TouchableOpacity>
