@@ -10,7 +10,7 @@ import { CartIcon } from './components/CartIcon.js';
 import { CartProvider } from './CartContext.js';
 import HomePage from './screens/HomePage.js';
 
-const Stack = createNativeStackNavigator();
+//const Stack = createNativeStackNavigator();
 
 function App() {
   return (
