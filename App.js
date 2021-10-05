@@ -8,11 +8,13 @@ import { ProductDetails } from './screens/ProductDetails.js';
 import { Cart } from './screens/Cart.js';
 import { CartIcon } from './components/CartIcon.js';
 import { CartProvider } from './CartContext.js';
+import HomePage from './screens/HomePage.js';
 
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
+    /**
     <CartProvider>
       <NavigationContainer>
         <Stack.Navigator>
@@ -37,6 +39,8 @@ function App() {
         </Stack.Navigator>
       </NavigationContainer>
     </CartProvider>
+     */
+    <HomePage />
   );
 }
 
