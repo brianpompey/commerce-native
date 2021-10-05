@@ -20,8 +20,8 @@ export function Recipes ({navigation}) {
   
   return (
     <FlatList
-      style={styles.productsList}
-      contentContainerStyle={styles.productsListContainer}
+      style={styles.recipesList}
+      contentContainerStyle={styles.recipesListContainer}
       keyExtractor={(item) => item.id.toString()}
       data={recipes}
       renderItem={renderRecipe}
@@ -30,12 +30,12 @@ export function Recipes ({navigation}) {
 }
 
 const styles = StyleSheet.create({
-  productsList: {
-    backgroundColor: '#eeeeee',
-  },
-  productsListContainer: {
-    backgroundColor: '#eeeeee',
-    paddingVertical: 8,
-    marginHorizontal: 8,
-  },
+    recipesList: {
+        backgroundColor: '#eeeeee',
+    },
+    recipesListContainer: {
+        backgroundColor: '#eeeeee',
+        paddingVertical: 8,
+        marginHorizontal: 8,
+    },
 });
