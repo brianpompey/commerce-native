@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Icon from '../components/Icon';
-import { Main } from './Main.js';
+import Main from './Main.js';
 import { ProductsList } from './ProductsList.js';
 import { CartIcon } from './../components/CartIcon.js';
 
