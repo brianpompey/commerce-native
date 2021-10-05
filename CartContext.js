@@ -41,7 +41,8 @@ export function CartProvider(props) {
   }
   
   function clearCart() {
-    return items = [];
+    setItems: 0;
+    return items;
   }
   
   return (
