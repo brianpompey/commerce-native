@@ -39,7 +39,7 @@ export function Cart ({navigation}) {
       keyExtractor={(item) => item.product.id.toString()}
       ListFooterComponent={Totals}
     />
-    <TouchableOpacity style={styles.clearButton} onPress={clearCart}>
+    <TouchableOpacity style={styles.clearButton} onPress={() => total(0)}>
       <Text style={styles.buttonText}>Clear Cart</Text>
     </TouchableOpacity>
     </View>
