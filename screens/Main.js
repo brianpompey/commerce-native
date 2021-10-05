@@ -7,7 +7,13 @@ export function Main ({navigation}) {
     return(
         <View style={styles.container}>
             <Text style={styles.headingText}>SmokeShow</Text>
-            <Icon/>
+            <TouchableOpacity 
+                onPress={() => {
+                    navigation.navigate('Products');
+                }}>
+                <Text>Grills</Text>
+                <Image style={styles.stretch} source={require('./../assets/home/grills.jpg')}/>
+            </TouchableOpacity>
             <TouchableOpacity>
                 <Text>Recipes</Text>
                 <Image style={styles.stretch} source={require('./../assets/home/recipes.jpg')}/>
