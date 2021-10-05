@@ -38,7 +38,11 @@ export function CartProvider(props) {
   
   function getTotalPrice() {
       return items.reduce((sum, item) => (sum + item.totalPrice), 0);
-  }  
+  }
+  
+  function clearCart() {
+    return items = [];
+  }
   
   return (
     <CartContext.Provider 
