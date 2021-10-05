@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Main } from './Main.js';
 import { ProductsList } from './ProductsList.js';
 import { CartIcon } from './../components/CartIcon.js';
+import SmokerPage from './SmokerPage.js';
 
 
 const Stack = createNativeStackNavigator();
@@ -14,6 +15,7 @@ export default function HomePage() {
             <Stack.Navigator initialRouteName="Main">
 
                 <Stack.Screen name='Main' component={Main} />
+                <Stack.Screen name='Grills' component={SmokerPage} />
                 
             </Stack.Navigator>
         </NavigationContainer>
