@@ -1,6 +1,20 @@
 import React from "react";
-import { View, Text, FlatList, StyleSheet } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import Icon from "../components/Icon";
+
+
+export function Main ({navigation}) {
+    return(
+        <View style={styles.container}>
+            <Text style={styles.headingText}>SmokeShow</Text>
+            <Icon/>
+            <TouchableOpacity>
+                <Text>Recipes</Text>
+                <Image style={styles.stretch} source={require('./../assets/home/recipes.jpg')}/>
+            </TouchableOpacity>
+        </View>
+    );
+}
 
 const styles = StyleSheet.create({
     container: {
@@ -19,18 +33,3 @@ const styles = StyleSheet.create({
         resizeMode: 'stretch',
     }
 });
-
-const Main = ({navigation}) => {
-    return(
-        <View style={styles.container}>
-            <Text style={styles.headingText}>SmokeShow</Text>
-            <Icon/>
-            <TouchableOpacity>
-                <Text>Recipes</Text>
-                <Image style={styles.stretch} source={require('./../assets/home/recipes.jpg')}/>
-            </TouchableOpacity>
-        </View>
-    );
-}
-
-export {Main};
