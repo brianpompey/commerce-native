@@ -9,7 +9,7 @@ export function Main ({navigation}) {
             <Text style={styles.headingText}>SmokeShow</Text>
             <TouchableOpacity 
                 onPress={() => {
-                    navigation.navigate('Products');
+                    navigation.navigate('Grills');
                 }}>
                 <Text>Grills</Text>
                 <Image style={styles.stretch} source={require('./../assets/home/grills.jpg')}/>
