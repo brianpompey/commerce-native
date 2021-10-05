@@ -31,17 +31,17 @@ export function Cart ({navigation}) {
   
   return (
     <View>
-    <FlatList
-      style={styles.itemsList}
-      contentContainerStyle={styles.itemsListContainer}
-      data={items}
-      renderItem={renderItem}
-      keyExtractor={(item) => item.product.id.toString()}
-      ListFooterComponent={Totals}
-    />
-    <TouchableOpacity style={styles.clearButton} onPress={clearCart}>
-      <Text style={styles.buttonText}>Clear Cart</Text>
-    </TouchableOpacity>
+      <FlatList
+        style={styles.itemsList}
+        contentContainerStyle={styles.itemsListContainer}
+        data={items}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.product.id.toString()}
+        ListFooterComponent={Totals}
+      />
+      <TouchableOpacity style={styles.clearButton} onPress={clearCart}>
+        <Text style={styles.buttonText}>Clear Cart</Text>
+      </TouchableOpacity>
     </View>
   );
 }

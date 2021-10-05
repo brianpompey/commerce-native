@@ -1,14 +1,41 @@
-import React from "react";
-import { Text, StyleSheet } from "react-native";
+import React, {useEffect, useState} from 'react';
+import { View, Text, FlatList, StyleSheet } from 'react-native';
+
+import { Recipe } from '../components/RecipeCard.js';
+import { getRecipes } from '../services/RecipeService.js';
 
 export function Recipes ({navigation}) {
-    return(
-        <Text style={styles.mainText}>RECIPES COMING SOON!!!</Text>
-    )
+
+  function renderRecipe({item: recipe}) {
+    return (
+      <Recipe {...recipe} />
+    );
+  }
+  
+  const [recipes, setRecipes] = useState([]);
+  
+  useEffect(() => {
+    setRecipes(getRecipes());
+  });
+  
+  return (
+    <FlatList
+      style={styles.productsList}
+      contentContainerStyle={styles.productsListContainer}
+      keyExtractor={(item) => item.id.toString()}
+      data={recipes}
+      renderItem={renderRecipe}
+    />
+  );
 }
 
 const styles = StyleSheet.create({
-    mainText: {
-      fontSize: 20
-    }
+  productsList: {
+    backgroundColor: '#eeeeee',
+  },
+  productsListContainer: {
+    backgroundColor: '#eeeeee',
+    paddingVertical: 8,
+    marginHorizontal: 8,
+  },
 });

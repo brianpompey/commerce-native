@@ -40,8 +40,9 @@ export function CartProvider(props) {
       return items.reduce((sum, item) => (sum + item.totalPrice), 0);
   }
   
+  /** */
   function clearCart() {
-    setItems: 0;
+    return setItems(0);
   }
   
   return (
