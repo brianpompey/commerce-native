@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   description: {
-    fontSize: 16,
+    fontSize: 17,
     fontWeight: '400',
     color: '#787878',
     marginBottom: 16,
