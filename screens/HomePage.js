@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -16,13 +16,14 @@ import LoginScreen from './LoginScreen.js';
 const Stack = createNativeStackNavigator();
 
 export default function HomePage() {
+    const [logIn, setLogIn] = useState(false); 
     return(
         <CartProvider>
             <NavigationContainer>
-                <Stack.Navigator initialRouteName="Main">
+                <Stack.Navigator initialRouteName="Login">
                     <Stack.Screen options={{ headerShown: false }} name='Main' component={Main} />
                     <Stack.Screen name='Recipes' component={Recipes} />
-                    <Stack.Screen name='Login' component={LoginScreen} />
+                    <Stack.Screen options={{ headerShown: false }} name='Login' component={LoginScreen} />
                     <Stack.Screen name='Grills' component={ProductsList} 
                             options={({ navigation }) => ({
                                 title: 'Grills',

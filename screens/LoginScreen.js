@@ -46,6 +46,9 @@ const LoginScreen = () => {
             behavior="padding"
         
         >
+            <View >
+                <Text style={styles.mainHeading}>Welcome to SmokeShow</Text>
+            </View>
             <View style={styles.inputContainer}>
                 <TextInput
                     placeholder="Email"
@@ -68,6 +71,7 @@ const LoginScreen = () => {
                 >
                     <Text style={styles.buttonText}>Login</Text>
                 </TouchableOpacity>
+                <br />
                 <TouchableOpacity
                     onPress={handleSignUp}
                     style={[styles.button, styles.buttonOutline]}
@@ -88,6 +92,9 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    mainHeading: {
+        fontSize: 70,
     },
     inputContainer: {
       width: '80%'

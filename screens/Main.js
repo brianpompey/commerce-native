@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import { render } from "react-dom";
 import { View, Text, FlatList, TouchableOpacity, StyleSheet, Image } from 'react-native';
-
+import { useNavigation } from '@react-navigation/native'
+import { auth } from "../firebase";
 
 
 export function Main ({navigation}) {
+   // const [logIn, setLogIn] = useState(false);
+   // const navigation = useNavigation()
+
+    const handleSignOut = () => {
+        auth
+        .signOut()
+        .then(() => {
+            navigation.replace("Login")
+        })
+        .catch(error => alert(error.message))
+    } 
+
     return(
         <View style={styles.container}>
             <Text style={styles.headingText}>SmokeShow</Text>
@@ -23,10 +37,9 @@ export function Main ({navigation}) {
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.button}
-                onPress={() => {
-                    navigation.navigate('Login');
-                }}>
-                <Text>Login</Text>
+                onPress={handleSignOut}
+            >
+                <Text>Logout</Text>
             </TouchableOpacity>
         </View>
     );
