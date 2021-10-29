@@ -21,6 +21,13 @@ export function Main ({navigation}) {
                 <Text>Recipes</Text>
                 <Image style={styles.stretch} source={require('./../assets/home/recipes.jpg')}/>
             </TouchableOpacity>
+            <TouchableOpacity
+                onPress={() => {
+                    navigation.navigate('Login');
+                }}>
+                <Text>Login</Text>
+                <Image style={styles.stretch} source={require('./../assets/home/recipes.jpg')}/>
+            </TouchableOpacity>
         </View>
     );
 }
