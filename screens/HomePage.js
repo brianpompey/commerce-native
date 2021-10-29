@@ -9,6 +9,7 @@ import { ProductDetails } from './ProductDetails.js';
 import { Cart } from './Cart.js';
 import { CartProvider } from './../CartContext.js';
 import { Recipes } from './Recipes.js';
+import LoginScreen from './LoginScreen.js';
 
 
 
@@ -21,6 +22,7 @@ export default function HomePage() {
                 <Stack.Navigator initialRouteName="Main">
                     <Stack.Screen name='Main' component={Main} />
                     <Stack.Screen name='Recipes' component={Recipes} />
+                    <Stack.Screen name='Login' component={LoginScreen} />
                     <Stack.Screen name='Grills' component={ProductsList} 
                             options={({ navigation }) => ({
                                 title: 'Grills',
