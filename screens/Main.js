@@ -22,11 +22,11 @@ export function Main ({navigation}) {
                 <Image style={styles.stretch} source={require('./../assets/home/recipes.jpg')}/>
             </TouchableOpacity>
             <TouchableOpacity
+                style={styles.button}
                 onPress={() => {
                     navigation.navigate('Login');
                 }}>
                 <Text>Login</Text>
-                <Image style={styles.stretch} source={require('./../assets/home/recipes.jpg')}/>
             </TouchableOpacity>
         </View>
     );
@@ -47,5 +47,12 @@ const styles = StyleSheet.create({
         width: 250,
         height: 200,
         resizeMode: 'stretch',
-    }
+    },
+    button: {
+        backgroundColor: '#808080',
+        width: '20%',
+        padding: 15,
+        borderRadius: 10,
+        alignItems: 'center',
+    },
 });
