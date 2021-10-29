@@ -20,7 +20,7 @@ export default function HomePage() {
         <CartProvider>
             <NavigationContainer>
                 <Stack.Navigator initialRouteName="Main">
-                    <Stack.Screen name='Main' component={Main} />
+                    <Stack.Screen options={{ headerShown: false }} name='Main' component={Main} />
                     <Stack.Screen name='Recipes' component={Recipes} />
                     <Stack.Screen name='Login' component={LoginScreen} />
                     <Stack.Screen name='Grills' component={ProductsList} 

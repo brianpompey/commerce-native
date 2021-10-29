@@ -1,11 +1,21 @@
 import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 
 
 const LoginScreen = () => {
     return(
-        <h2>Hello World</h2>
+        <View>
+            <Text>Login</Text>
+        </View>
     )
 }
 
 
 export default LoginScreen;
+
+const styles = StyleSheet.create({
+    headerTitle: {
+      fontSize: 20
+    }
+  });
+
