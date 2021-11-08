@@ -71,7 +71,7 @@ const LoginScreen = () => {
                 >
                     <Text style={styles.buttonText}>Login</Text>
                 </TouchableOpacity>
-                <br />
+        
                 <TouchableOpacity
                     onPress={handleSignUp}
                     style={[styles.button, styles.buttonOutline]}
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     mainHeading: {
-        fontSize: 70,
+        fontSize: 55,
     },
     inputContainer: {
       width: '80%'

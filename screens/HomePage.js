@@ -16,7 +16,7 @@ import LoginScreen from './LoginScreen.js';
 const Stack = createNativeStackNavigator();
 
 export default function HomePage() {
-    const [logIn, setLogIn] = useState(false); 
+  //  const [logIn, setLogIn] = useState(false); 
     return(
         <CartProvider>
             <NavigationContainer>
